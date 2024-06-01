@@ -1,0 +1,86 @@
+[
+  {
+    "Month": "January",
+    "Monthh": "1",
+    "TotalSales": "43971.37",
+    "TotalProfit": "7140.44",
+    "ProfitPerSales": "0.16"
+  },
+  {
+    "Month": "February",
+    "Monthh": "2",
+    "TotalSales": "20301.13",
+    "TotalProfit": "1613.87",
+    "ProfitPerSales": "0.08"
+  },
+  {
+    "Month": "March",
+    "Monthh": "3",
+    "TotalSales": "58872.35",
+    "TotalProfit": "14751.89",
+    "ProfitPerSales": "0.25"
+  },
+  {
+    "Month": "April",
+    "Monthh": "4",
+    "TotalSales": "36521.54",
+    "TotalProfit": "933.29",
+    "ProfitPerSales": "0.03"
+  },
+  {
+    "Month": "May",
+    "Monthh": "5",
+    "TotalSales": "44261.11",
+    "TotalProfit": "6342.58",
+    "ProfitPerSales": "0.14"
+  },
+  {
+    "Month": "June",
+    "Monthh": "6",
+    "TotalSales": "52981.73",
+    "TotalProfit": "8223.34",
+    "ProfitPerSales": "0.16"
+  },
+  {
+    "Month": "July",
+    "Monthh": "7",
+    "TotalSales": "45264.42",
+    "TotalProfit": "6952.62",
+    "ProfitPerSales": "0.15"
+  },
+  {
+    "Month": "August",
+    "Monthh": "8",
+    "TotalSales": "63120.89",
+    "TotalProfit": "9040.96",
+    "ProfitPerSales": "0.14"
+  },
+  {
+    "Month": "September",
+    "Monthh": "9",
+    "TotalSales": "87866.65",
+    "TotalProfit": "10991.56",
+    "ProfitPerSales": "0.13"
+  },
+  {
+    "Month": "October",
+    "Monthh": "10",
+    "TotalSales": "77776.92",
+    "TotalProfit": "9275.28",
+    "ProfitPerSales": "0.12"
+  },
+  {
+    "Month": "November",
+    "Monthh": "11",
+    "TotalSales": "118447.82",
+    "TotalProfit": "9690.1",
+    "ProfitPerSales": "0.08"
+  },
+  {
+    "Month": "December",
+    "Monthh": "12",
+    "TotalSales": "83829.32",
+    "TotalProfit": "8483.35",
+    "ProfitPerSales": "0.1"
+  }
+]
