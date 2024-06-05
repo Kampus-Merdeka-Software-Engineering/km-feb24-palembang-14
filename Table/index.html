@@ -6,892 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Superstore</title>
 
-    <!-- link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/Table/style.css" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet"/>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Menambahkan Datatables -->
     <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script
-      defer
-      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"
-    ></script>
-    <script
-      defer
-      src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"
-    ></script>
-    <script defer src="script.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js" ></script>
+
+    <!-- DataTables Responsive CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
   </head>
 
   <body>
-    <div class="container">
-      <table id="example" class="table table-striped" style="width: 100%">
+    <nav class="navbar">
+      <a href="/" class="navbar-logo">Super<span>Store</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#Chart">Chart</a>
+        <a href="../index.html#team">Team</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form end -->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Datatables Start -->
+    <div class="table-wrapper">
+      <table id="table" class="display">
         <thead>
-          <tr>
-            <th>Row ID</th>
-            <th>Order ID</th>
-            <th>Order Date</th>
-            <th>Ship Date</th>
-            <th>Ship Mode</th>
-            <th>Customer ID</th>
-            <th>Customer Name</th>
-            <th>Segment</th>
-            <th>Country</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Postal Code</th>
-            <th>Region</th>
-            <th>Product ID</th>
-            <th>Category</th>
-            <th>Sub-Category</th>
-            <th>Product Name</th>
-            <th>Sales</th>
-            <th>Quantity</th>
-            <th>Dsicount</th>
-            <th>Profit</th>
-          </tr>
+            <tr>
+                <th>Row ID</th>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Ship Date</th>
+                <th>Ship Mode</th>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Segment</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Postal Code</th>
+                <th>Region</th>
+                <th>Product ID</th>
+                <th>Category</th>
+                <th>Sub-Category</th>
+                <th>Product Name</th>
+                <th>Sales</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Profit</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>CA-2016-152156</td>
-            <td>11/8/2016</td>
-            <td>11/11/2016</td>
-            <td>Second Class</td>
-            <td>CG-12520</td>
-            <td>Claire Gute</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Henderson</td>
-            <td>Kentucky</td>
-            <td>42420</td>
-            <td>South</td>
-            <td>FUR-BO-10001798</td>
-            <td>Furniture</td>
-            <td>Bookcases</td>
-            <td>Bush Somerset Collection Bookcase</td>
-            <td>261.96</td>
-            <td>2</td>
-            <td>0</td>
-            <td>41.9136</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>CA-2016-152156</td>
-            <td>11/8/2016</td>
-            <td>11/11/2016</td>
-            <td>Second Class</td>
-            <td>CG-12520</td>
-            <td>Claire Gute</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Henderson</td>
-            <td>Kentucky</td>
-            <td>42420</td>
-            <td>South</td>
-            <td>FUR-CH-10000454</td>
-            <td>Furniture</td>
-            <td>Chairs</td>
-            <td>Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back</td>
-            <td>731.94,</td>
-            <td>3</td>
-            <td>0</td>
-            <td>219.582</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>CA-2016-138688</td>
-            <td>6/12/2016</td>
-            <td>6/16/2016</td>
-            <td>Second Class</td>
-            <td>DV-13045</td>
-            <td>Darrin Van Huff</td>
-            <td>Corporate</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90036</td>
-            <td>West</td>
-            <td>OFF-LA-10000240</td>
-            <td>Office Supplies</td>
-            <td>Labels</td>
-            <td>Self-Adhesive Address Labels for Typewriters by Universal</td>
-            <td>142.62</td>
-            <td>2</td>
-            <td>0</td>
-            <td>6.8714</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>US-2015-108966</td>
-            <td>10/11/2015</td>
-            <td>10/18/2015</td>
-            <td>Standard Class</td>
-            <td>SO-20335</td>
-            <td>Sean O'Donnell</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Fort Lauderdale</td>
-            <td>Florida</td>
-            <td>33311</td>
-            <td>South</td>
-            <td>FUR-TA-10000577</td>
-            <td>Furniture</td>
-            <td>Tables</td>
-            <td>Bretford CR4500 Series Slim Rectangular Table</td>
-            <td>957.5775</td>
-            <td>5</td>
-            <td>0.45</td>
-            <td>-383.031</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>US-2015-108966</td>
-            <td>10/11/2015</td>
-            <td>10/18/2015</td>
-            <td>Standard Class</td>
-            <td>SO-20335</td>
-            <td>Sean O'Donnell</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Fort Lauderdale</td>
-            <td>Florida</td>
-            <td>33311</td>
-            <td>South</td>
-            <td>OFF-ST-10000760</td>
-            <td>Office Supplies</td>
-            <td>Storage</td>
-            <td>Eldon Fold 'N Roll Cart System</td>
-            <td>22.368</td>
-            <td>2</td>
-            <td>0.2</td>
-            <td>2.5164</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>CA-2014-115812</td>
-            <td>6/9/2014</td>
-            <td>6/14/2014</td>
-            <td>Standard Class</td>
-            <td>BH-11710</td>
-            <td>Brosina Hoffman</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90032</td>
-            <td>West</td>
-            <td>FUR-FU-10001487</td>
-            <td>Furniture</td>
-            <td>Furnishings</td>
-            <td>
-              Eldon Expressions Wood and Plastic Desk Accessories, Cherry Wood
-            </td>
-            <td>48.86</td>
-            <td>7</td>
-            <td>0</td>
-            <td>14.1694</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>CA-2014-115812</td>
-            <td>6/9/2014</td>
-            <td>6/14/2014</td>
-            <td>Standard Class</td>
-            <td>BH-11710</td>
-            <td>Brosina Hoffman</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90032</td>
-            <td>West</td>
-            <td>OFF-AR-10002833</td>
-            <td>Office Supplies</td>
-            <td>Art</td>
-            <td>Newell 322</td>
-            <td>7.28</td>
-            <td>4</td>
-            <td>0</td>
-            <td>1.9656</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>CA-2014-115812</td>
-            <td>6/9/2014</td>
-            <td>6/14/2014</td>
-            <td>Standard Class</td>
-            <td>BH-11710</td>
-            <td>Brosina Hoffman</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90032</td>
-            <td>West</td>
-            <td>TEC-PH-10002275</td>
-            <td>Technology</td>
-            <td>Phones</td>
-            <td>Mitel 5320 IP Phone VoIP phone</td>
-            <td>907.152</td>
-            <td>6</td>
-            <td>0.2</td>
-            <td>90.7152</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>CA-2014-115812</td>
-            <td>6/9/2014</td>
-            <td>6/14/2014</td>
-            <td>Standard Class</td>
-            <td>BH-11710</td>
-            <td>Brosina Hoffman</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90032</td>
-            <td>West</td>
-            <td>OFF-BI-10003910</td>
-            <td>Office Supplies</td>
-            <td>Binders</td>
-            <td>DXL Angle-View Binders with Locking Rings by Samsill</td>
-            <td>18.504</td>
-            <td>3</td>
-            <td>0.2</td>
-            <td>5.7825</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>CA-2014-115812</td>
-            <td>6/9/2014</td>
-            <td>6/14/2014</td>
-            <td>Standard Class</td>
-            <td>BH-11710</td>
-            <td>Brosina Hoffman</td>
-            <td>Consumer</td>
-            <td>United States</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>90032</td>
-            <td>West</td>
-            <td>OFF-AP-10002892</td>
-            <td>Office Supplies</td>
-            <td>Appliances</td>
-            <td>Belkin F5C206VTEL 6 Outlet Surge</td>
-            <td>114.9</td>
-            <td>5</td>
-            <td>0</td>
-            <td>34.47</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>17</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>19</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>20</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>21</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>22</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>24</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>25</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>26</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>27</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>28</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>29</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>31</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>32</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>33</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>34</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>35</td>
-            <td>CA-2017-107727</td>
-            <td>10/19/2017</td>
-            <td>10/23/2017</td>
-            <td>Second Class</td>
-            <td>MA-17560</td>
-            <td>Matt Abelman</td>
-            <td>Home Office</td>
-            <td>United States</td>
-            <td>Houston</td>
-            <td>Texas</td>
-            <td>77095</td>
-            <td>Central</td>
-            <td>OFF-PA-10000249</td>
-            <td>Office Supplies</td>
-            <td>Paper</td>
-            <td>Easy-staple paper</td>
-            <td>29.472</td>
-            <td>3</td>
-            <td>0.2</td>
-            <td>9.9468</td>
-          </tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <th>Row ID</th>
-            <th>Order ID</th>
-            <th>Order Date</th>
-            <th>Ship Date</th>
-            <th>Ship Mode</th>
-            <th>Customer ID</th>
-            <th>Customer Name</th>
-            <th>Segment</th>
-            <th>Country</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Postal Code</th>
-            <th>Region</th>
-            <th>Product ID</th>
-            <th>Category</th>
-            <th>Sub-Category</th>
-            <th>Product Name</th>
-            <th>Sales</th>
-            <th>Quantity</th>
-            <th>Dsicount</th>
-            <th>Profit</th>
-          </tr>
-        </tfoot>
-      </table>
+    </table>
+  </div>
+  <!-- Datatables End -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="socials">
+      <a href="#"><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
     </div>
+
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#Chart">Chart</a>
+      <a href="../index.html#team">Team</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">Team 14 Section Palembang</a>. &copy;2024.</p>
+    </div>
+    
+  </footer>
+  <!-- Footer end -->
+
+  <script>
+    feather.replace();
+  </script>
+  <script defer src="/Table/script.js"></script>
   </body>
 </html>
