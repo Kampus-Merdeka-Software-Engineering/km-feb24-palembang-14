@@ -271,7 +271,7 @@ body {
   width: 25rem;
   height: 33rem;
   padding-top: 1rem;
-  margin-right: 2rem;
+  margin-right: 4rem;
   margin-bottom: 2rem;
   border: solid #eee 1px;
   border-radius: 10px;
@@ -347,6 +347,49 @@ body {
   cursor: pointer;
   border-radius: 8px;
 }
+
+/* Popup */
+
+.popup {
+  visibility: hidden; /* Start hidden */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Initially scaled down */
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  opacity: 0; /* Start transparent */
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition */
+}
+
+.popup.openPopup {
+  visibility: visible; /* Make visible */
+  transform: translate(-50%, -50%) scale(1); /* Scaled up */
+  opacity: 1; /* Fully visible */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.popup img {
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
+}
+
+.popup .pushable {
+  background: #0069ea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.popup .pushable .front {
+  display: inline-block;
+}
+
 
 /* Footer */
 footer {
@@ -480,6 +523,11 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
+  }
+
+  .popup img {
+    width: 150px;
+    height: 150px;
   }
 }
 

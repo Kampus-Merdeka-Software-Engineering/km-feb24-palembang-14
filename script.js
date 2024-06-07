@@ -5,27 +5,12 @@ document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-// Toggle class active untuk search form
-const searchForm = document.querySelector(".search-form");
-const searchBox = document.querySelector("#search-box");
-
-document.querySelector("#search-button").onclick = (e) => {
-  searchForm.classList.toggle("active");
-  searchBox.focus();
-  e.preventDefault();
-};
-
-// Klik di luar element
+// Klik di luar elemen
 const hm = document.querySelector("#hamburger-menu");
-const sb = document.querySelector("#search-button");
 
 document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
-  }
-
-  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
-    searchForm.classList.remove("active");
   }
 });
 
@@ -34,7 +19,7 @@ const ctx = document.getElementById("myChart");
 var customers;
 var month;
 new Promise((resolve, reject) => {
-  fetch("./data/Hipo3.json")
+  fetch("./data/Chart.json")
     .then((resp) => resp.json())
     .then((items) => {
       customers = items;
@@ -90,4 +75,20 @@ new Promise((resolve, reject) => {
     .catch((err) => {
       reject(err);
     });
+});
+
+// Popup Function
+let popup = document.getElementById("popup");
+  
+function openPopup() {
+  popup.classList.add("openPopup");
+}
+  
+function closePopup() {
+  popup.classList.remove("openPopup");
+}
+  
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah form dari submit secara default
+  openPopup(); // Menampilkan popup
 });
