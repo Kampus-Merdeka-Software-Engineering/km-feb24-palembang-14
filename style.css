@@ -348,6 +348,12 @@ body {
   border-radius: 8px;
 }
 
+.contact .row form .btn:hover {
+  background-color: rgb(26, 25, 25);
+  color: #fff;
+  transition: 0.5s ease;
+}
+
 /* Popup */
 
 .popup {
@@ -379,11 +385,21 @@ body {
 }
 
 .popup .pushable {
+  margin: 1rem;
+  width: 60px;
+  height: 35px;
   background: #0069ea;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.popup .pushable:hover {
+  border: 1px solid #0069ea;
+  background: #fff;
+  color: #0069ea;
+  transition: 0.5s ease;
 }
 
 .popup .pushable .front {

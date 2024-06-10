@@ -79,16 +79,36 @@ new Promise((resolve, reject) => {
 
 // Popup Function
 let popup = document.getElementById("popup");
-  
+let errorPopup = document.getElementById("error-popup");
+let submitBtn = document.getElementById("submit-btn");
+
 function openPopup() {
-  popup.classList.add("openPopup");
+    popup.classList.add("openPopup");
 }
-  
+
 function closePopup() {
-  popup.classList.remove("openPopup");
+    popup.classList.remove("openPopup");
 }
-  
+
+function openErrorPopup() {
+    errorPopup.classList.add("openPopup");
+}
+
+function closeErrorPopup() {
+    errorPopup.classList.remove("openPopup");
+}
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Mencegah form dari submit secara default
-  openPopup(); // Menampilkan popup
+    event.preventDefault(); // Mencegah form dari submit secara default
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    if (name && email && phone && message) {
+        openPopup(); // Menampilkan popup
+    } else {
+        openErrorPopup(); // Menampilkan error popup
+    }
 });

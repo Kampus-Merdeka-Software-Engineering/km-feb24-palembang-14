@@ -146,44 +146,52 @@
       </section>
       <!-- Team End -->
   
-      <!-- Contact Section start -->
-      <section id="contact" class="contact">
-          <h2>Contact Us</h2>
-          <div class="row">
-              <form id="contactForm" action="">
-                  <div class="input-group">
-                      <i data-feather="user"></i>
-                      <input type="text" placeholder="Your Name Here" name="bame" />
-                  </div>
-                  <div class="input-group">
-                      <i data-feather="mail"></i>
-                      <input type="email" placeholder="Your Email Here" name="email" />
-                  </div>
-                  <div class="input-group">
-                      <i data-feather="phone"></i>
-                      <input type="number" placeholder="Your Phone Number Here" name="phone"/>
-                  </div>
-                  <div class="input-group">
-                      <i data-feather="message-circle"></i>
-                      <input type="text" placeholder="Your Message Here" />
-                  </div>
-                  <button type="submit" class="btn">Submit</button>
-              </form>
-          </div>
-      </section>
-      <!-- Contact Section end -->
-       
-      
-      <!-- Popup Section start -->
-       <div class="popup" id="popup">
-          <img src="./img/ceklis.png" alt="Checked">
-          <h2>Thank You</h2>
-          <p>Your form have been successfully submitted. Thanks!</p>
-          <button class="pushable" onclick="closePopup()">
-              <span class="front">OK</span>
-          </button>
+    <!-- Contact Section start -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="row">
+            <form id="contactForm" action="">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" placeholder="Your Name Here" name="name" id="name" />
+                </div>
+                <div class="input-group">
+                    <i data-feather="mail"></i>
+                    <input type="email" placeholder="Your Email Here" name="email" id="email" />
+                </div>
+                <div class="input-group">
+                    <i data-feather="phone"></i>
+                    <input type="number" placeholder="Your Phone Number Here" name="phone" id="phone" />
+                </div>
+                <div class="input-group">
+                    <i data-feather="message-circle"></i>
+                    <input type="text" placeholder="Your Message Here" name="message" id="message" />
+                </div>
+                    <button type="submit" class="btn" id="submit-btn">Submit</button>
+            </form>
         </div>
-      <!-- Popup Section end -->
+    </section>
+    <!-- Contact Section end -->
+
+    <!-- Popup Section start -->
+    <div class="popup" id="popup">
+        <img src="./img/ceklis.png" alt="Checked">
+        <h2>Thank You</h2>
+        <p>Your form have been successfully submitted. Thanks!</p>
+        <button class="pushable" onclick="closePopup()">
+            <span class="front">OK</span>
+        </button>
+    </div>
+
+    <div class="popup" id="error-popup">
+        <img src="./img/Error.png" alt="Error">
+        <h2>Error</h2>
+        <p>Please complete the contact form.</p>
+        <button class="pushable" onclick="closeErrorPopup()">
+            <span class="front">OK</span>
+        </button>
+    </div>
+    <!-- Popup Section end -->
   
       <!-- Footer start -->
       <footer>
