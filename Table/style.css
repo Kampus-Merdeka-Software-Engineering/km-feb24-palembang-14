@@ -103,7 +103,7 @@ body {
   margin-right: 2rem;
 }
 
-.filters-containerlabel {
+.filters-container label {
   margin-top: 10px;
 }
 
@@ -113,6 +113,7 @@ body {
   margin-top: 5px;
   padding: 5px;
   font-size: 16px;
+  max-width: 20rem;
 }
 
 /* Table */
