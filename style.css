@@ -175,6 +175,13 @@ body {
   margin-bottom: 6rem;
 }
 
+.Chart .chart-detail {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
 .Chart .row .content {
   flex: 1 1 35rem;
   padding: 0 1rem;

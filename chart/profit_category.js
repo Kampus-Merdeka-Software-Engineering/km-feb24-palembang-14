@@ -64,7 +64,6 @@ new Promise((resolve, reject) => {
           plugins: {
             title: {
               display: true,
-              text: 'Profit Growth by Category per Year',
             },
           },
         },
