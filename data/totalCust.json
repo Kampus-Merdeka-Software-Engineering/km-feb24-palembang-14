@@ -1,0 +1,49 @@
+[{
+  "Year": "2017",
+  "Segment": "Consumer",
+  "Number_of_Purchase": "1668"
+}, {
+  "Year": "2016",
+  "Segment": "Consumer",
+  "Number_of_Purchase": "1328"
+}, {
+  "Year": "2015",
+  "Segment": "Consumer",
+  "Number_of_Purchase": "1125"
+}, {
+  "Year": "2014",
+  "Segment": "Consumer",
+  "Number_of_Purchase": "1070"
+}, {
+  "Year": "2017",
+  "Segment": "Corporate",
+  "Number_of_Purchase": "980"
+}, {
+  "Year": "2016",
+  "Segment": "Corporate",
+  "Number_of_Purchase": "793"
+}, {
+  "Year": "2017",
+  "Segment": "Home Office",
+  "Number_of_Purchase": "664"
+}, {
+  "Year": "2015",
+  "Segment": "Corporate",
+  "Number_of_Purchase": "636"
+}, {
+  "Year": "2014",
+  "Segment": "Corporate",
+  "Number_of_Purchase": "611"
+}, {
+  "Year": "2016",
+  "Segment": "Home Office",
+  "Number_of_Purchase": "466"
+}, {
+  "Year": "2015",
+  "Segment": "Home Office",
+  "Number_of_Purchase": "341"
+}, {
+  "Year": "2014",
+  "Segment": "Home Office",
+  "Number_of_Purchase": "312"
+}]

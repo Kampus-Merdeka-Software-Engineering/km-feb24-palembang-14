@@ -1,0 +1,49 @@
+[{
+    "Year": "2017",
+    "Category": "Office Supplies",
+    "Profit": "39736.62"
+  }, {
+    "Year": "2017",
+    "Category": "Furniture",
+    "Profit": "3018.39"
+  }, {
+    "Year": "2017",
+    "Category": "Technology",
+    "Profit": "50684.26"
+  }, {
+    "Year": "2016",
+    "Category": "Office Supplies",
+    "Profit": "35061.23"
+  }, {
+    "Year": "2016",
+    "Category": "Technology",
+    "Profit": "39773.99"
+  }, {
+    "Year": "2016",
+    "Category": "Furniture",
+    "Profit": "6959.95"
+  }, {
+    "Year": "2015",
+    "Category": "Office Supplies",
+    "Profit": "25099.53"
+  }, {
+    "Year": "2015",
+    "Category": "Furniture",
+    "Profit": "3015.2"
+  }, {
+    "Year": "2015",
+    "Category": "Technology",
+    "Profit": "33503.87"
+  }, {
+    "Year": "2014",
+    "Category": "Office Supplies",
+    "Profit": "22593.42"
+  }, {
+    "Year": "2014",
+    "Category": "Furniture",
+    "Profit": "5457.73"
+  }, {
+    "Year": "2014",
+    "Category": "Technology",
+    "Profit": "21492.83"
+  }]
