@@ -15,7 +15,7 @@ new Promise((resolve, reject) => {
             {
               type: "bar",
               label: "# Profit",
-              data: customers3.map((item) => item.TotalProfit),
+              data: customers3.map((item) => item.Profit),
               borderWidth: 1,
               backgroundColor: [
                 '#FF0000',

@@ -131,7 +131,7 @@ body {
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about .row {
@@ -172,7 +172,6 @@ body {
 
 .Chart {
   padding: 8rem 7% 1.4rem;
-  margin-bottom: 6rem;
 }
 
 .Chart .chart-detail {
@@ -192,9 +191,7 @@ body {
 }
 
 .Chart .row .content {
-  margin-bottom: 0.8rem;
   font-size: 1.3rem;
-
   line-height: 1.6;
   color: #393737;
 }
@@ -206,7 +203,6 @@ body {
 
 .chart2 .chart_types {
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .chart2 .chart_types button {
@@ -214,7 +210,6 @@ body {
 }
 
 .Chart .row .content p {
-  margin-bottom: 0.8rem;
   font-size: 1.3rem;
   line-height: 1.6;
   color: #393737;
@@ -399,7 +394,7 @@ footer .socials a {
 
 footer .socials a:hover,
 footer .links a:hover {
-  color: var(--bg);
+  color: #000000;
 }
 
 footer .links {

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataTables Example</title>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  <!-- Include DataTables JS -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="/Table/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="/" class="navbar-logo">Super<span>Store</span>.</a>
+
+    <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#Chart">Chart</a>
+        <a href="/Table/index.html">Table</a>
+        <a href="index.htmlteam.html">Team</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+</nav>
+<!-- Navbar end -->
+ <h1>Product Table</h1>
+
+  <table id="productTable" class="display">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Product Name</th>
+        <th>Profit</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#chart">Chart</a>
+          <a href="index.html#table">Table</a>
+          <a href="index.html#team">Team</a>
+          <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="credit">
+          <p>Created by <a href="">Team 14 Section Palembang</a>. &copy;2024.</p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $.getJSON("data/product_Profit.json", function(data) {
+        let table = $('#productTable').DataTable();
+        let counter = 1;
+        $.each(data, function(key, value) {
+          table.row.add([
+            counter,
+            value.Product_Name,
+            value.Profit
+          ]).draw(false);
+          counter++;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
