@@ -52,14 +52,14 @@ fetch("../data/totalCust.json")
             stacked: true,
             title: {
               display: true,
-              text: 'Years'
+              text: 'Number of Purchases'
             }
           },
           y: {
             stacked: true,
             title: {
               display: true,
-              text: 'Number of Purchases'
+              text: 'Years'
             }
           }
         }
